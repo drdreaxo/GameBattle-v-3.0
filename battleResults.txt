@@ -1,0 +1,81 @@
+GAME STARTS!
+ It's Hacker_Andrea's turn. Current HP 🔋 = 157
+1: Attack
+2: Use Ransmone_Ware
+3: Use a Potion
+Enter action 🎯: Hacker_Andrea uses Ransmone_Ware for 39 damage. 🥊
+
+ It's CS_Professor's turn. Current HP 🔋 = 211
+1: Attack
+2: Use Grade_Attack
+3: Use a Potion
+Enter action 🎯: CS_Professor uses Grade_Attack for 38 damage. 🥊
+
+ It's Hacker_Andrea's turn. Current HP 🔋 = 119
+1: Attack
+2: Use Ransmone_Ware
+3: Use a Potion
+Enter action 🎯: Hacker_Andrea uses Ransmone_Ware for 44 damage. 🥊
+
+ It's CS_Professor's turn. Current HP 🔋 = 167
+1: Attack
+2: Use Grade_Attack
+3: Use a Potion
+Enter action 🎯: CS_Professor uses Grade_Attack for 21 damage. 🥊
+
+ It's Hacker_Andrea's turn. Current HP 🔋 = 98
+1: Attack
+2: Use Ransmone_Ware
+3: Use a Potion
+Enter action 🎯: Hacker_Andrea uses Ransmone_Ware for 31 damage. 🥊
+
+ It's CS_Professor's turn. Current HP 🔋 = 136
+1: Attack
+2: Use Grade_Attack
+3: Use a Potion
+Enter action 🎯: CS_Professor uses Grade_Attack for 25 damage. 🥊
+
+ It's Hacker_Andrea's turn. Current HP 🔋 = 73
+1: Attack
+2: Use Ransmone_Ware
+3: Use a Potion
+Enter action 🎯: Hacker_Andrea uses Ransmone_Ware for 25 damage. 🥊
+
+ It's CS_Professor's turn. Current HP 🔋 = 111
+1: Attack
+2: Use Grade_Attack
+3: Use a Potion
+Enter action 🎯: CS_Professor uses Grade_Attack for 38 damage. 🥊
+
+ It's Hacker_Andrea's turn. Current HP 🔋 = 35
+1: Attack
+2: Use Ransmone_Ware
+3: Use a Potion
+Enter action 🎯: Hacker_Andrea uses Ransmone_Ware for 24 damage. 🥊
+
+ It's CS_Professor's turn. Current HP 🔋 = 87
+1: Attack
+2: Use Grade_Attack
+3: Use a Potion
+Enter action 🎯: CS_Professor uses Grade_Attack for 33 damage. 🥊
+
+ It's Hacker_Andrea's turn. Current HP 🔋 = 2
+1: Attack
+2: Use Ransmone_Ware
+3: Use a Potion
+Enter action 🎯: Hacker_Andrea uses Ransmone_Ware for 30 damage. 🥊
+
+ It's CS_Professor's turn. Current HP 🔋 = 57
+1: Attack
+2: Use Grade_Attack
+3: Use a Potion
+Enter action 🎯: CS_Professor uses Grade_Attack for 34 damage. 🥊
+
+⚠️ ❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️ GAME OVER ❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️⚠️
+
+Hacker_Andrea YOU'RE A LOSER!!!!!!!!!!!!😆 😆 🫣 🤗 🫡 
+CS_Professor WINS. 🏆🥇🤩 🥳 🪅
+Hacker_Andrea (157 HP) vs CS_Professor (250 HP)
+
+Hacker_Andrea final HP: -32
+CS_Professor final HP: 57
