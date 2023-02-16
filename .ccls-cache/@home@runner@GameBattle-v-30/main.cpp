@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
+#include <sstream>
 using namespace std;
 
 struct Character {
@@ -16,12 +17,6 @@ struct Character {
 int minAttackDamage, maxAttackDamage;
 int minSpellDamage, maxSpellDamage;
 int minPotion, maxPotion;
-
-// Function declarations
-void printCharacterInfo(Character hero, Character monster, ofstream &outFile);
-void attack(Character &attacker, Character &defender, ofstream &outFile);
-void useSpell(Character &caster, Character &target, ofstream &outFile);
-void usePotion(Character &character, ofstream &outFile);
 
 void attack(Character &attacker, Character &defender, ofstream &outFile) {
   int damage =
@@ -73,9 +68,9 @@ void usePotion(Character &character, ofstream &outFile) {
 void printCharacterInfo(Character hero, Character monster, ofstream &outFile) {
   outFile << hero.name << " (" << hero.health << " HP) vs " << monster.name
           << " (" << monster.health << " HP)" << endl;
+  cout << hero.name << " (" << hero.health << " HP) vs " << monster.name
+          << " (" << monster.health << " HP)" << endl;
 }
-
-// Open the character info
 
 int main() {
   // Open the character info file
@@ -115,12 +110,14 @@ int main() {
   Character *currentCharacter = &hero;
   Character *otherCharacter = &monster;
 
-  cout << "GAME STARTS!";
-  outFile << "GAME STARTS!";
+  cout << "\nGAME STARTS!\n";
+  outFile << "\nGAME STARTS!\n";
+
+  printCharacterInfo(*currentCharacter, *otherCharacter, outFile);
   while (!gameOver) {
 
     // Print the current character's turn and health
-    cout << "\n It's " << currentCharacter->name
+    cout << "\nIt's " << currentCharacter->name
          << "'s turn. Current HP 🔋 = " << currentCharacter->currentHealth << endl;
     outFile << "\n It's " << currentCharacter->name
          << "'s turn. Current HP 🔋 = " << currentCharacter->currentHealth << endl;
@@ -129,29 +126,35 @@ int main() {
     // Print the menu
     cout << "1: Attack\n2: Use " << currentCharacter->spellName
          << "\n3: Use a Potion\nEnter action 🎯: ";
+    
     outFile << "1: Attack\n2: Use " << currentCharacter->spellName
          << "\n3: Use a Potion\nEnter action 🎯: ";
 
     // Get the user's choice
+    string input;
+    getline(cin, input);  // read a line of input
+    stringstream ss(input);   // create a stringstream from the input
+    
     int choice;
-    cin >> choice;
-
-    // Take the appropriate action based on the user's choice
-    switch (choice) {
-    case 1:
-      attack(*currentCharacter, *otherCharacter, outFile); //
-      break;
-    case 2:
-      useSpell(*currentCharacter, *otherCharacter, outFile);
-      break;
-    case 3:
-      usePotion(*currentCharacter, outFile);
-      break;
-    default:
-      cout << "Invalid choice. Please try again." << endl;
-      continue;
-    }
-
+    if (ss >> choice) { // attempt to read an integer from the stringstream 
+      // Input was an integer
+      switch (choice) {
+        case 1:
+          attack(*currentCharacter, *otherCharacter, outFile);
+          break;
+        case 2:
+          useSpell(*currentCharacter, *otherCharacter, outFile);
+          break;
+        case 3:
+          usePotion(*currentCharacter, outFile);
+          break;
+        default:
+          cout << "Invalid input. Please enter a number between 1 and 3. Turn skipped" << endl;
+          break;
+        } 
+      } else {
+        cout << "Invalid input. Please enter a number between 1 and 3. Turn skipped" << endl;
+    }  
     // Check if the game is over
     if (otherCharacter->currentHealth <= 0) {
       cout << "\n⚠️ ❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️ GAME OVER ❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️⚠️" << endl;
@@ -162,6 +165,7 @@ int main() {
 
       cout << currentCharacter->name << " WINS. 🏆🥇🤩 🥳 🪅";
       outFile << currentCharacter->name << " WINS. 🏆🥇🤩 🥳 🪅";
+      
       gameOver = true;
       } else {
       // Switch to the other character's turn
@@ -181,11 +185,8 @@ int main() {
   outFile << endl << hero.name << " final HP: " << hero.currentHealth << endl;
   cout << endl <<hero.name << " final HP: " << hero.currentHealth << endl;
 
-   
   outFile << monster.name << " final HP: " << monster.currentHealth << endl;
   cout << monster.name << " final HP: " << monster.currentHealth << endl;
-
-  
 
   outFile.close();
 }
