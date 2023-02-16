@@ -1,0 +1,5 @@
+Hacker_Andrea  157 Ransmone_Ware
+CS_Professor 250 Grade_Attack
+5 30
+20 44
+20 30
